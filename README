@@ -1,0 +1,13 @@
+Run these commands to set up the docker container
+> docker build -t receiptservice ./   
+> docker run -p 3000:3000 receiptservice
+
+The Post route is http://localhost:3000/receipts/process
+The Post expects a json body that matches the receipt examples on the github page
+The Post returns the id given to the receipt
+
+The Get route is http://localhost:3000/receipts/{id}/points
+The Get expects no body, just the id inside of the path
+The Get returns the points given to the correlated receipt
+
+all of these routes were ran through postman
